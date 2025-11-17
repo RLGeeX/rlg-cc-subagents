@@ -2,15 +2,15 @@
 
 Standalone specialized agents for [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) Claude Code plugin.
 
-[![Version](https://img.shields.io/badge/version-2.1.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
+[![Version](https://img.shields.io/badge/version-2.1.1-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Agents](https://img.shields.io/badge/agents-45-orange.svg)](agents/INDEX.md)
+[![Agents](https://img.shields.io/badge/agents-59-orange.svg)](agents-catalog.md)
 
 ---
 
 ## Overview
 
-This repository contains **45 specialized agents** for Claude Code, covering development, infrastructure, quality, and product management. Each agent is an expert in specific technologies, frameworks, or workflows, designed to help you build better software faster.
+This repository contains **59 specialized agents** for Claude Code, covering development, infrastructure, quality, and product management. Each agent is an expert in specific technologies, frameworks, or workflows, designed to help you build better software faster.
 
 ### What are Standalone Agents?
 
