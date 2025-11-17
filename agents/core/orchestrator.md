@@ -102,10 +102,23 @@ User Request
    ```python
    framework_patterns = {
        'from django': ['django-developer'],
-       'from fastapi': ['fastapi-developer'],
+       'from fastapi': ['fastapi-pro'],
        'from flask': ['python-pro'],
        'import React': ['react-specialist'],
-       'next/': ['nextjs-developer'],
+       'next/': ['nextjs-specialist'],
+       '@mui/material': ['material-ui-specialist'],
+       'amplify/': ['aws-amplify-gen2-specialist'],
+       'defineAuth': ['aws-amplify-gen2-specialist'],
+       'defineData': ['aws-amplify-gen2-specialist'],
+       '@apollo/client': ['graphql-specialist'],
+       'aws-appsync': ['graphql-specialist'],
+       'recharts': ['data-visualization-specialist'],
+       'apexcharts': ['data-visualization-specialist'],
+       'd3': ['data-visualization-specialist'],
+       'aws-lambda': ['aws-lambda-specialist'],
+       '@aws-sdk/client-dynamodb': ['dynamodb-specialist'],
+       'okta': ['enterprise-sso-specialist'],
+       'saml': ['enterprise-sso-specialist'],
    }
    ```
 

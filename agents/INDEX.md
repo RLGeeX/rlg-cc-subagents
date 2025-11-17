@@ -1,6 +1,6 @@
 # Agent Catalog
 
-Complete catalog of all 51 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
+Complete catalog of all 59 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
 
 ## Core Agents (3)
 
@@ -46,7 +46,7 @@ Complete catalog of all 51 specialized agents for Claude Code. Each agent is a d
 
 ---
 
-## Development Agents (14)
+## Development Agents (18)
 
 ### python-pro
 **Description:** An expert Python developer specializing in writing clean, performant, and idiomatic code. Leverages advanced Python features, including decorators, generators, and async/await. Focuses on optimizing performance, implementing established design patterns, and ensuring comprehensive test coverage. Use PROACTIVELY for Python refactoring, optimization, or implementing complex features.
@@ -244,7 +244,63 @@ Complete catalog of all 51 specialized agents for Claude Code. Each agent is a d
 
 ---
 
-## Infrastructure Agents (9)
+### nextjs-specialist
+**Description:** Expert Next.js developer specializing in App Router architecture, server components, server actions, and streaming with Suspense. Masters React Server Components, Route Handlers, and full-stack Next.js patterns. Use PROACTIVELY for Next.js development, SSR optimization, or modern React patterns.
+
+**Key Capabilities:**
+- Next.js 15 App Router and file-based routing
+- React Server Components and server actions
+- Streaming SSR with Suspense
+- Route Handlers and API development
+- Performance optimization (Image, Font, Script components)
+
+**File:** `development/nextjs-specialist.md`
+
+---
+
+### material-ui-specialist
+**Description:** Expert Material-UI developer specializing in component design, theming, responsive layouts, and accessible user interfaces. Masters MUI v7, sx prop patterns, custom components, and design systems. Use PROACTIVELY for MUI implementation, theme customization, or component architecture.
+
+**Key Capabilities:**
+- Material-UI v7 component library
+- Theme customization and design tokens
+- sx prop styling and responsive design
+- Component composition and customization
+- Accessibility compliance (WCAG 2.1 AA)
+
+**File:** `development/material-ui-specialist.md`
+
+---
+
+### graphql-specialist
+**Description:** Expert GraphQL developer specializing in schema design, resolvers, AWS AppSync integration, and real-time subscriptions with emphasis on type safety and performance. Masters GraphQL SDL, DataLoader patterns, and connection-based pagination. Use PROACTIVELY for GraphQL API design, AppSync integration, or subscription architecture.
+
+**Key Capabilities:**
+- GraphQL schema design and SDL
+- AWS AppSync resolvers (VTL and Lambda)
+- Real-time subscriptions and mutations
+- DataLoader for N+1 query prevention
+- Relay-style pagination (connections, edges, cursors)
+
+**File:** `development/graphql-specialist.md`
+
+---
+
+### data-visualization-specialist
+**Description:** Expert data visualization developer specializing in interactive charts, dashboards, and real-time data displays. Masters Recharts, ApexCharts, D3.js, and responsive visualization patterns. Use PROACTIVELY for chart implementation, dashboard design, or data storytelling.
+
+**Key Capabilities:**
+- Chart libraries (Recharts, ApexCharts, D3.js)
+- Responsive and mobile-friendly visualizations
+- Real-time data streaming charts
+- Interactive tooltips and legends
+- Performance optimization for large datasets
+
+**File:** `development/data-visualization-specialist.md`
+
+---
+
+## Infrastructure Agents (13)
 
 ### cloud-architect
 **Description:** Expert cloud architect specializing in AWS/Azure/GCP multi-cloud infrastructure design, advanced IaC (Terraform/OpenTofu/CDK), FinOps cost optimization, and modern architectural patterns. Masters serverless, microservices, security, compliance, and disaster recovery. Use PROACTIVELY for cloud architecture, cost optimization, migration planning, or multi-cloud strategies.
@@ -369,6 +425,62 @@ Complete catalog of all 51 specialized agents for Claude Code. Each agent is a d
 - Cost optimization and performance
 
 **File:** `infrastructure/gcp-serverless-specialist.md`
+
+---
+
+### aws-amplify-gen2-specialist
+**Description:** Expert AWS Amplify Gen 2 developer specializing in TypeScript-first backend development with defineAuth, defineData, and defineFunction. Masters two-pass authorization system, custom resolvers, and Gen 2 architecture patterns. Use PROACTIVELY for Amplify Gen 2 implementation, authorization rules, or schema design.
+
+**Key Capabilities:**
+- Amplify Gen 2 TypeScript backend (defineAuth, defineData, defineFunction)
+- Two-pass authorization (resource groups + database endpoints)
+- Custom business logic with Lambda resolvers
+- Multi-tenant data isolation patterns
+- Real-time GraphQL subscriptions
+
+**File:** `infrastructure/aws-amplify-gen2-specialist.md`
+
+---
+
+### aws-lambda-specialist
+**Description:** Expert AWS Lambda developer specializing in serverless architecture, event-driven patterns, and cold start optimization. Masters Lambda function design, triggers, integrations, and cost optimization. Use PROACTIVELY for serverless design, Lambda optimization, or event-driven architecture.
+
+**Key Capabilities:**
+- Lambda function development (Node.js, Python, Go)
+- Cold start optimization (<100ms)
+- Event sources (API Gateway, EventBridge, S3, DynamoDB Streams)
+- Lambda Layers and deployment optimization
+- Error handling and observability
+
+**File:** `infrastructure/aws-lambda-specialist.md`
+
+---
+
+### dynamodb-specialist
+**Description:** Expert Amazon DynamoDB architect specializing in NoSQL data modeling, single-table design, and access patterns. Masters partition key design, GSI/LSI optimization, and DynamoDB Streams. Use PROACTIVELY for DynamoDB schema design, query optimization, or migration planning.
+
+**Key Capabilities:**
+- Single-table design patterns
+- Partition key and sort key strategies
+- Global Secondary Index (GSI) design
+- DynamoDB Streams for event sourcing
+- Cost optimization and capacity planning
+
+**File:** `infrastructure/dynamodb-specialist.md`
+
+---
+
+### enterprise-sso-specialist
+**Description:** Expert enterprise SSO specialist for Okta, SAML 2.0, and OIDC integration. Masters multi-tenant B2B authentication, JIT provisioning, and organization-based login routing. Use PROACTIVELY for enterprise SSO implementation, SAML configuration, or multi-tenant authentication.
+
+**Key Capabilities:**
+- Okta integration and SAML 2.0 configuration
+- OIDC and OAuth 2.0 flows
+- Multi-tenant organization routing
+- Just-in-Time (JIT) user provisioning
+- Group mapping and role assignment
+
+**File:** `infrastructure/enterprise-sso-specialist.md`
 
 ---
 
@@ -735,8 +847,8 @@ Complete catalog of all 51 specialized agents for Claude Code. Each agent is a d
 ## Agent Categories Summary
 
 - **Core Agents (3)**: Always-loaded foundational agents for TDD, documentation, and orchestration
-- **Development Agents (14)**: Language-specific and architecture specialists for building applications
-- **Infrastructure Agents (9)**: Cloud, security, deployment, and operational excellence specialists
+- **Development Agents (18)**: Language-specific and architecture specialists for building applications
+- **Infrastructure Agents (13)**: Cloud, security, deployment, and operational excellence specialists
 - **Kubernetes Agents (4)**: Container orchestration, GitOps, and cluster management experts
 - **Product Management Agents (7)**: Product strategy, documentation, and agile workflow specialists
 - **Quality Agents (11)**: Testing, security, performance, and code quality experts
@@ -754,5 +866,5 @@ Complete catalog of all 51 specialized agents for Claude Code. Each agent is a d
 ## Version
 
 - **Catalog Version**: 1.1.0
-- **Total Agents**: 51
+- **Total Agents**: 59
 - **Last Updated**: 2025-11-17
