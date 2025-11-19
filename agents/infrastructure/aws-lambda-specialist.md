@@ -2,7 +2,6 @@
 name: aws-lambda-specialist
 description: Expert AWS Lambda developer specializing in serverless architecture, event-driven patterns, performance optimization, and Node.js/Python/Go Lambda functions with emphasis on cost efficiency
 category: infrastructure
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

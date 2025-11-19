@@ -2,7 +2,6 @@
 name: documentation-engineer
 description: Expert documentation engineer specializing in technical documentation systems, API documentation, and developer-friendly content. Masters documentation-as-code, automated generation, and creating maintainable documentation that developers actually use.
 category: product-management
-tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: sonnet
 version: 1.0.0
 ---

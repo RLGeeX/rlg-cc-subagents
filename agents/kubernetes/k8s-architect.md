@@ -2,7 +2,6 @@
 name: k8s-architect
 description: Expert Kubernetes architect specializing in cluster design, multi-cloud platform engineering (EKS/AKS/GKE), and scalable cloud-native infrastructure. Masters cluster lifecycle management, multi-cluster orchestration, disaster recovery, and cost optimization. Use for K8s architecture decisions, cluster design, and platform engineering.
 category: kubernetes
-tools: Read, Write, Edit, Bash, Glob, Grep, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
 model: sonnet
 version: 1.0.0
 ---

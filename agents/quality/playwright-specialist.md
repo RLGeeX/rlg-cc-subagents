@@ -2,7 +2,6 @@
 name: playwright-specialist
 description: Expert Playwright testing specialist for modern web automation, E2E testing, and visual regression. Masters test parallelization, fixtures, Page Object Model, and CI/CD integration. Use PROACTIVELY for browser testing, test automation architecture, or Playwright troubleshooting.
 category: quality
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

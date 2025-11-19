@@ -2,7 +2,6 @@
 name: nextjs-specialist
 description: Expert Next.js developer specializing in App Router, server components, and modern React patterns with emphasis on performance optimization and type safety
 category: development
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

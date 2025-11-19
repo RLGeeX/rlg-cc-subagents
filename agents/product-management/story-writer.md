@@ -2,7 +2,6 @@
 name: story-writer
 description: Expert at converting requirements and feature ideas into well-structured user stories with acceptance criteria, clear scope, and testable outcomes. Use PROACTIVELY for story creation, epic decomposition, and backlog refinement.
 category: product-management
-tools: Read, Write, Edit, Bash, Glob, Grep, Task
 model: sonnet
 version: 1.0.0
 ---

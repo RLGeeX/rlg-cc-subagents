@@ -2,7 +2,6 @@
 name: slack-integration-specialist
 description: Expert Slack integration developer specializing in Slack Bot API, webhooks, Block Kit UI, and event-driven architecture. Masters interactive components, slash commands, and real-time messaging. Use PROACTIVELY for Slack bot development, notification systems, or Slack API troubleshooting.
 category: development
-tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch]
 model: sonnet
 version: 1.0.0
 ---

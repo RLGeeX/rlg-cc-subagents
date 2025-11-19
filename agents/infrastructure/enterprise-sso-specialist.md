@@ -2,7 +2,6 @@
 name: enterprise-sso-specialist
 description: Expert enterprise single sign-on specialist focusing on Okta, Auth0, SAML 2.0, OIDC, and multi-tenant B2B authentication with emphasis on security and compliance
 category: infrastructure
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

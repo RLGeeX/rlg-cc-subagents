@@ -2,7 +2,6 @@
 name: orchestrator
 description: Core agent that coordinates multi-agent workflows, manages context budget, and routes requests to skills. Use PROACTIVELY for complex multi-agent coordination tasks.
 category: core
-tools: Read, Task, TodoWrite
 model: sonnet
 version: 1.0.0
 ---

@@ -2,7 +2,6 @@
 name: graphql-specialist
 description: Expert GraphQL developer specializing in schema design, resolvers, AWS AppSync integration, and real-time subscriptions with emphasis on type safety and performance
 category: development
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

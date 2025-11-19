@@ -2,7 +2,6 @@
 name: financial-data-analyst
 description: Expert financial data analyst specializing in market data processing, sentiment analysis, and anomaly detection. Masters time-series analysis, statistical methods, and real-time data streaming. ANALYSIS ONLY - never provides investment advice. Use PROACTIVELY for market monitoring systems, data pipeline design, or financial analytics.
 category: business
-tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch]
 model: sonnet
 version: 1.0.0
 ---

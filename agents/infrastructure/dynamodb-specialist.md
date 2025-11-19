@@ -2,7 +2,6 @@
 name: dynamodb-specialist
 description: Expert Amazon DynamoDB architect specializing in single-table design, access patterns, GSI/LSI optimization, and high-performance NoSQL data modeling with emphasis on cost efficiency
 category: infrastructure
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

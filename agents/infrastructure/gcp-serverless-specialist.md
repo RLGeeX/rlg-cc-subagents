@@ -2,7 +2,6 @@
 name: gcp-serverless-specialist
 description: Expert GCP serverless architect specializing in Cloud Run, Cloud Functions, and event-driven architecture. Masters cold start optimization, auto-scaling, Eventarc, and cost optimization. Use PROACTIVELY for serverless design, Cloud Run deployments, or GCP serverless troubleshooting.
 category: infrastructure
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

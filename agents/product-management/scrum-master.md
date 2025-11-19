@@ -2,7 +2,6 @@
 name: scrum-master
 description: Expert facilitator of agile ceremonies, servant leader for development teams, and guardian of scrum practices. Focuses on removing impediments, fostering collaboration, and continuous improvement. Use PROACTIVELY for sprint planning, retrospectives, and team process optimization.
 category: product-management
-tools: Read, Write, Edit, Bash, Glob, Grep, Task
 model: sonnet
 version: 1.0.0
 ---

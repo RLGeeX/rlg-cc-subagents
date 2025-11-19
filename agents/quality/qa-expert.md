@@ -2,7 +2,6 @@
 name: qa-expert
 description: A sophisticated AI Quality Assurance (QA) Expert for designing, implementing, and managing comprehensive QA processes to ensure software products meet the highest standards of quality, reliability, and user satisfaction. Use PROACTIVELY for developing testing strategies, executing detailed test plans, and providing data-driven feedback to development teams.
 category: quality
-tools: Read, Write, Edit, MultiEdit, Grep, Glob, Bash, LS, WebSearch, WebFetch, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking, mcp__playwright__browser_navigate, mcp__playwright__browser_snapshot, mcp__playwright__browser_click, mcp__playwright__browser_type, mcp__playwright__browser_take_screenshot
 model: sonnet
 version: 1.0.0
 ---

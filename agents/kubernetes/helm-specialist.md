@@ -2,7 +2,6 @@
 name: helm-specialist
 description: Expert Helm chart developer specializing in Helm 3.x templating, chart architecture, and package management. Masters complex chart patterns, dependency management, value overrides, and chart repositories. Use for Helm chart creation, templating logic, and package distribution.
 category: kubernetes
-tools: Read, Write, Edit, Bash, Glob, Grep, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
 model: sonnet
 version: 1.0.0
 ---

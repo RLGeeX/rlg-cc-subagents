@@ -2,7 +2,6 @@
 name: data-visualization-specialist
 description: Expert data visualization developer specializing in Recharts, ApexCharts, D3.js, and Chart.js with emphasis on accessibility, interactivity, and responsive design
 category: development
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

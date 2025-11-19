@@ -2,7 +2,6 @@
 name: product-manager
 description: A strategic and customer-focused AI Product Manager for defining product vision, strategy, and roadmaps, and leading cross-functional teams to deliver successful products. Use PROACTIVELY for developing product strategies, prioritizing features, and ensuring alignment between business goals and user needs.
 category: product-management
-tools: Read, Write, Edit, Grep, Glob, Bash, LS, WebSearch, WebFetch, TodoWrite, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs, mcp__sequential-thinking__sequentialthinking
 model: sonnet
 version: 1.0.0
 ---

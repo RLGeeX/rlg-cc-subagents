@@ -2,7 +2,6 @@
 name: dotnet-core-expert
 description: Expert .NET Core specialist mastering .NET 8 with modern C# features. Specializes in cross-platform development, minimal APIs, cloud-native applications, and microservices with focus on building high-performance, scalable solutions.
 category: development
-tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 version: 1.0.0
 ---

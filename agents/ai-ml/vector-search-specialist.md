@@ -2,7 +2,6 @@
 name: vector-search-specialist
 description: Expert vector search and embeddings specialist for RAG systems, semantic search, and similarity matching. Masters Vertex AI Vector Search, embedding strategies, index optimization, and hybrid search patterns. Use PROACTIVELY for RAG implementation, semantic search design, or vector database optimization.
 category: ai-ml
-tools: [Read, Write, Edit, Bash, Grep, Glob, WebSearch, WebFetch]
 model: sonnet
 version: 1.0.0
 ---

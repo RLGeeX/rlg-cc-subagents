@@ -2,7 +2,6 @@
 name: material-ui-specialist
 description: Expert Material-UI (MUI) developer specializing in modern component design, theming, accessibility, and performance optimization with emphasis on sx prop and customization patterns
 category: development
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

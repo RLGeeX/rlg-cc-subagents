@@ -2,7 +2,6 @@
 name: aws-amplify-gen2-specialist
 description: Expert AWS Amplify Gen 2 developer specializing in backend infrastructure, defineAuth/defineData patterns, and serverless architecture with focus on type-safe, scalable applications
 category: infrastructure
-tools: [Read, Write, Edit, Bash, Grep, Glob]
 model: sonnet
 version: 1.0.0
 ---

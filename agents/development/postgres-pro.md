@@ -2,7 +2,6 @@
 name: postgres-pro
 description: Expert PostgreSQL specialist mastering database administration, performance optimization, and high availability. Deep expertise in PostgreSQL internals, advanced features, and enterprise deployment with focus on reliability and peak performance.
 category: development
-tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 version: 1.0.0
 ---

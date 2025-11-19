@@ -2,7 +2,6 @@
 name: k8s-security
 description: Expert Kubernetes security specialist focusing on Pod Security Standards, network policies, RBAC, admission control, and runtime security. Masters OPA/Gatekeeper, Kyverno, Falco, image security, and supply chain protection. Use for K8s security hardening, policy implementation, and compliance validation.
 category: kubernetes
-tools: Read, Write, Edit, Bash, Glob, Grep, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
 model: sonnet
 version: 1.0.0
 ---

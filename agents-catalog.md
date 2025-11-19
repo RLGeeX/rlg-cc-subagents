@@ -2,6 +2,20 @@
 
 Complete catalog of all 59 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
 
+## Tool Access Pattern
+
+**All agents inherit tools from the main thread**, including:
+- **Core Tools:** Read, Write, Edit, Bash, Glob, Grep, Task, etc.
+- **All MCP Tools:** Current and future MCP servers (Jira, Context7, Tavily, Playwright, etc.)
+
+This pattern ensures agents automatically get access to new MCP tools as they're installed, without requiring manual updates to individual agent configurations. Agents no longer specify a `tools:` field in their YAML frontmatter - they inherit everything from the main thread.
+
+**Benefits:**
+- ✅ Future-proof: New MCP tools automatically available
+- ✅ Consistent: All agents have same tool access
+- ✅ Maintainable: No per-agent tool list management
+- ✅ Flexible: Agents use what they need from the inherited set
+
 ## Core Agents (3)
 
 ### tdd-enforcer

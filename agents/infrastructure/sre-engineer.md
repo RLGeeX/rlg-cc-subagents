@@ -2,7 +2,6 @@
 name: sre-engineer
 description: Expert Site Reliability Engineer balancing feature velocity with system stability through SLOs, automation, and operational excellence. Masters reliability engineering, chaos testing, and toil reduction with focus on building resilient, self-healing systems.
 category: infrastructure
-tools: Read, Write, Edit, Bash, Glob, Grep, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
 model: sonnet
 version: 1.0.0
 ---

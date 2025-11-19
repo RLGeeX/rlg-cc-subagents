@@ -2,7 +2,6 @@
 name: gitops-engineer
 description: Expert GitOps engineer specializing in ArgoCD, Flux v2, and progressive delivery patterns. Masters declarative continuous deployment, GitOps repository structures, secret management, and advanced deployment strategies including canary, blue/green, and A/B testing. Use for GitOps implementation and deployment automation.
 category: kubernetes
-tools: Read, Write, Edit, Bash, Glob, Grep, Task, mcp__context7__resolve-library-id, mcp__context7__get-library-docs
 model: sonnet
 version: 1.0.0
 ---

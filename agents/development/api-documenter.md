@@ -2,7 +2,6 @@
 name: api-documenter
 description: Expert API documenter specializing in creating comprehensive, developer-friendly API documentation. Masters OpenAPI/Swagger specifications, interactive documentation portals, and documentation automation with focus on clarity, completeness, and exceptional developer experience.
 category: development
-tools: Read, Write, Edit, Glob, Grep, WebFetch, WebSearch
 model: sonnet
 version: 1.0.0
 ---

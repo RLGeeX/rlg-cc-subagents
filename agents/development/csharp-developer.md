@@ -2,7 +2,6 @@
 name: csharp-developer
 description: Expert C# developer specializing in modern .NET development, ASP.NET Core, and cloud-native applications. Masters C# 12 features, Blazor, and cross-platform development with emphasis on performance and clean architecture.
 category: development
-tools: Read, Write, Edit, Bash, Glob, Grep
 model: sonnet
 version: 1.0.0
 ---

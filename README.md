@@ -236,7 +236,6 @@ Each agent follows the standalone format with YAML frontmatter:
 name: python-pro
 description: Expert Python developer specializing in modern async patterns, FastAPI, and type-safe code. Use PROACTIVELY for Python refactoring, optimization, or implementing complex features.
 category: development
-tools: Read, Write, Edit, Bash, Grep, Glob, WebSearch, Task
 model: sonnet
 version: 1.0.0
 ---
@@ -250,10 +249,23 @@ version: 1.0.0
 
 - **name**: Simple agent identifier (no prefixes)
 - **description**: Detailed description for auto-delegation
-- **category**: One of: core, development, infrastructure, kubernetes, product-management, quality
-- **tools**: Comma-separated list of available tools
+- **category**: One of: core, development, infrastructure, kubernetes, product-management, quality, ai-ml, business
 - **model**: Claude model (sonnet, haiku, opus)
 - **version**: Semantic version
+
+### Tool Access
+
+**All agents inherit tools from the main thread**, including:
+- **Core Tools:** Read, Write, Edit, Bash, Glob, Grep, Task, etc.
+- **All MCP Tools:** Jira, Context7, Tavily, Playwright, and any future MCP servers
+
+Agents no longer specify a `tools:` field in their YAML frontmatter. This ensures:
+- ✅ Automatic access to new MCP tools as they're installed
+- ✅ Consistent tool availability across all agents
+- ✅ Reduced maintenance overhead
+- ✅ Future-proof configuration
+
+Agents use only the tools they need from the inherited set.
 
 ---
 

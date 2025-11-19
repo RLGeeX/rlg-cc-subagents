@@ -2,7 +2,6 @@
 name: jira-specialist
 description: Expert at formatting stories, managing epics, organizing sprints, and leveraging JIRA features for optimal project tracking and team collaboration. Use PROACTIVELY for JIRA workflow optimization, sprint planning, and issue management.
 category: product-management
-tools: Read, Write, Edit, Bash, Glob, Grep, Task
 model: sonnet
 version: 1.0.0
 ---
