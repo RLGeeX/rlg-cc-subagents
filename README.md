@@ -2,7 +2,7 @@
 
 Standalone specialized agents for [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) Claude Code plugin.
 
-[![Version](https://img.shields.io/badge/version-2.1.1-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
+[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Agents](https://img.shields.io/badge/agents-59-orange.svg)](agents-catalog.md)
 
