@@ -1,9 +1,7 @@
 ---
 name: api-architect
 description: Universal API designer specializing in RESTful design, GraphQL schemas, and modern contract standards. **MUST BE USED** proactively whenever a project needs a new or revised API contract. Produces clear resource models, OpenAPI/GraphQL specs, and guidance on auth, versioning, pagination, and error formats—without prescribing any specific backend technology.
-category: development
-model: sonnet
-version: 2.5.0
+model: opus
 ---
 
 # Universal API Architect

@@ -1,9 +1,7 @@
 ---
 name: orchestrator
 description: Core agent that coordinates multi-agent workflows, manages context budget, and routes requests to skills. Use PROACTIVELY for complex multi-agent coordination tasks.
-category: core
-model: sonnet
-version: 1.0.0
+model: opus
 ---
 
 # Orchestrator

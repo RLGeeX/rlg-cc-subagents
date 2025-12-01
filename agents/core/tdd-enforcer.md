@@ -1,9 +1,7 @@
 ---
 name: tdd-enforcer
 description: Core agent that ensures test-driven development practices throughout the codebase. Enforces RED-GREEN-REFACTOR cycle and verification before completion. Use PROACTIVELY to maintain testing standards and prevent implementation without tests.
-category: core
-model: sonnet
-version: 1.0.0
+model: opus
 ---
 
 # TDD Enforcer

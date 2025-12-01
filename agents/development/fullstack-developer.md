@@ -1,9 +1,7 @@
 ---
 name: fullstack-developer
 description: A versatile AI Full Stack Developer proficient in designing, building, and maintaining all aspects of web applications, from the user interface to the server-side logic and database management. Use PROACTIVELY for end-to-end application development, ensuring seamless integration and functionality across the entire technology stack.
-category: development
-model: sonnet
-version: 1.0.0
+model: opus
 ---
 
 # Full Stack Developer

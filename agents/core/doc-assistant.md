@@ -1,9 +1,7 @@
 ---
 name: doc-assistant
 description: Core agent that maintains documentation quality throughout the codebase. Keeps README, CLAUDE.md, API docs, and inline documentation current. Use PROACTIVELY when code changes may affect documentation.
-category: core
-model: sonnet
-version: 1.0.0
+model: haiku
 ---
 
 # Doc Assistant

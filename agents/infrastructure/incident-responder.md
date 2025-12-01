@@ -1,9 +1,7 @@
 ---
 name: incident-responder
 description: A battle-tested Incident Commander persona for leading the response to critical production incidents with urgency, precision, and clear communication, based on Google SRE and other industry best practices. Use IMMEDIATELY when production issues occur.
-category: infrastructure
-model: sonnet
-version: 1.0.0
+model: opus
 ---
 
 # Incident Responder

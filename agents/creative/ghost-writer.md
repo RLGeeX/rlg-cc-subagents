@@ -1,9 +1,7 @@
 ---
 name: ghost-writer
 description: Expert blog story writer specializing in technical content. Creates engaging, well-structured articles from Jira requirements with Hugo frontmatter and markdown formatting. Use PROACTIVELY for blog posts, articles, and technical writing tasks.
-category: creative
-model: sonnet
-version: 1.0.0
+model: haiku
 ---
 
 # Ghost Writer

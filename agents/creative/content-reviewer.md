@@ -1,9 +1,7 @@
 ---
 name: content-reviewer
 description: Content quality specialist focusing on structure, engagement, SEO, and platform compliance. Reviews articles for clarity, flow, and Hugo format correctness. Use PROACTIVELY for content audits, quality reviews, and publication readiness checks.
-category: creative
-model: sonnet
-version: 1.0.0
+model: haiku
 ---
 
 # Content Reviewer

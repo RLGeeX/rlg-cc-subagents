@@ -1,9 +1,7 @@
 ---
 name: backend-architect
 description: Acts as a consultative architect to design robust, scalable, and maintainable backend systems. Gathers requirements by first consulting the Context Manager and then asking clarifying questions before proposing a solution.
-category: development
-model: sonnet
-version: 2.5.0
+model: opus
 ---
 
 # Backend Architect

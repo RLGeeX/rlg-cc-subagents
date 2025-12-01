@@ -1,9 +1,7 @@
 ---
 name: python-devops-engineer
 description: Specialized agent for Python DevOps, CI/CD, deployment automation, containerization, and infrastructure as code
-category: infrastructure
-model: sonnet
-version: 1.0.0
+model: opus
 ---
 
 # Python DevOps/CI-CD Expert Agent
@@ -76,7 +74,7 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
-    
+
     services:
       postgres:
         image: postgres:15
@@ -90,7 +88,7 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
-      
+
       redis:
         image: redis:7
         options: >-
@@ -177,7 +175,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    
+
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
       with:
@@ -195,7 +193,7 @@ jobs:
     needs: [test, security]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    
+
     steps:
     - uses: actions/checkout@v4
 
@@ -236,7 +234,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     environment: production
-    
+
     steps:
     - uses: actions/checkout@v4
 
@@ -247,13 +245,13 @@ jobs:
       run: |
         echo "$KUBE_CONFIG" | base64 -d > kubeconfig
         export KUBECONFIG=kubeconfig
-        
+
         # Update image tag in deployment
         sed -i "s|IMAGE_TAG|$IMAGE_TAG|g" k8s/deployment.yaml
-        
+
         # Apply Kubernetes manifests
         kubectl apply -f k8s/
-        
+
         # Wait for deployment to complete
         kubectl rollout status deployment/myapp -n production --timeout=300s
 ```
@@ -349,7 +347,6 @@ CMD ["gunicorn", "src.main:app", "-w", "4", "-k", "uvicorn.workers.UvicornWorker
 
 **docker-compose.yml** (for local development):
 ```yaml
-version: '3.8'
 
 services:
   app:
@@ -582,7 +579,7 @@ terraform {
       version = "~> 2.20"
     }
   }
-  
+
   backend "s3" {
     bucket = "myapp-terraform-state"
     key    = "infrastructure/terraform.tfstate"
@@ -609,9 +606,9 @@ module "eks" {
   eks_managed_node_groups = {
     main = {
       name = "main"
-      
+
       instance_types = ["m6i.large"]
-      
+
       min_size     = 1
       max_size     = 10
       desired_size = 3
@@ -852,22 +849,22 @@ def track_request_metrics(func: Callable) -> Callable:
     async def wrapper(*args, **kwargs):
         start_time = time.time()
         request = kwargs.get('request') or args[0]
-        
+
         method = request.method
         path = request.url.path
-        
+
         try:
             response = await func(*args, **kwargs)
             status_code = getattr(response, 'status_code', 200)
-            
+
             REQUEST_COUNT.labels(
                 method=method,
                 endpoint=path,
                 status_code=status_code
             ).inc()
-            
+
             return response
-            
+
         except Exception as e:
             REQUEST_COUNT.labels(
                 method=method,
@@ -875,14 +872,14 @@ def track_request_metrics(func: Callable) -> Callable:
                 status_code=500
             ).inc()
             raise
-            
+
         finally:
             duration = time.time() - start_time
             REQUEST_DURATION.labels(
                 method=method,
                 endpoint=path
             ).observe(duration)
-    
+
     return wrapper
 
 def track_celery_metrics(func: Callable) -> Callable:
@@ -891,58 +888,58 @@ def track_celery_metrics(func: Callable) -> Callable:
     def wrapper(*args, **kwargs):
         task_name = func.__name__
         start_time = time.time()
-        
+
         try:
             result = func(*args, **kwargs)
             status = 'success'
             return result
-            
+
         except Exception as e:
             status = 'failure'
             raise
-            
+
         finally:
             duration = time.time() - start_time
             CELERY_TASK_DURATION.labels(
                 task_name=task_name,
                 status=status
             ).observe(duration)
-    
+
     return wrapper
 
 class MetricsMiddleware:
     """FastAPI middleware for automatic metrics collection"""
-    
+
     def __init__(self, app):
         self.app = app
-    
+
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
             await self.app(scope, receive, send)
             return
-        
+
         start_time = time.time()
-        
+
         async def send_wrapper(message):
             if message["type"] == "http.response.start":
                 status_code = message["status"]
                 method = scope["method"]
                 path = scope["path"]
-                
+
                 REQUEST_COUNT.labels(
                     method=method,
                     endpoint=path,
                     status_code=status_code
                 ).inc()
-                
+
                 duration = time.time() - start_time
                 REQUEST_DURATION.labels(
                     method=method,
                     endpoint=path
                 ).observe(duration)
-            
+
             await send(message)
-        
+
         await self.app(scope, receive, send_wrapper)
 ```
 
@@ -958,7 +955,7 @@ import traceback
 
 class StructuredFormatter(logging.Formatter):
     """Custom formatter for structured JSON logging"""
-    
+
     def format(self, record: logging.LogRecord) -> str:
         log_entry = {
             'timestamp': datetime.utcnow().isoformat(),
@@ -969,7 +966,7 @@ class StructuredFormatter(logging.Formatter):
             'function': record.funcName,
             'line': record.lineno,
         }
-        
+
         # Add extra fields
         if hasattr(record, 'user_id'):
             log_entry['user_id'] = record.user_id
@@ -977,7 +974,7 @@ class StructuredFormatter(logging.Formatter):
             log_entry['request_id'] = record.request_id
         if hasattr(record, 'correlation_id'):
             log_entry['correlation_id'] = record.correlation_id
-        
+
         # Add exception info if present
         if record.exc_info:
             log_entry['exception'] = {
@@ -985,19 +982,19 @@ class StructuredFormatter(logging.Formatter):
                 'message': str(record.exc_info[1]),
                 'traceback': traceback.format_exception(*record.exc_info)
             }
-        
+
         return json.dumps(log_entry, ensure_ascii=False)
 
 def setup_logging(level: str = "INFO", structured: bool = True):
     """Configure application logging"""
-    
+
     # Clear existing handlers
     root_logger = logging.getLogger()
     root_logger.handlers.clear()
-    
+
     # Create handler
     handler = logging.StreamHandler(sys.stdout)
-    
+
     if structured:
         handler.setFormatter(StructuredFormatter())
     else:
@@ -1005,45 +1002,45 @@ def setup_logging(level: str = "INFO", structured: bool = True):
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
         handler.setFormatter(formatter)
-    
+
     # Configure root logger
     root_logger.addHandler(handler)
     root_logger.setLevel(getattr(logging, level.upper()))
-    
+
     # Configure specific loggers
     logging.getLogger('uvicorn.access').disabled = True
     logging.getLogger('sqlalchemy.engine').setLevel(logging.WARNING)
-    
+
     return root_logger
 
 class LoggingContextMiddleware:
     """Middleware to add request context to logs"""
-    
+
     def __init__(self, app):
         self.app = app
-    
+
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
             await self.app(scope, receive, send)
             return
-        
+
         # Generate request ID
         import uuid
         request_id = str(uuid.uuid4())
-        
+
         # Add to scope for access in endpoints
         scope['request_id'] = request_id
-        
+
         # Configure logging context
         old_factory = logging.getLogRecordFactory()
-        
+
         def record_factory(*args, **kwargs):
             record = old_factory(*args, **kwargs)
             record.request_id = request_id
             return record
-        
+
         logging.setLogRecordFactory(record_factory)
-        
+
         try:
             await self.app(scope, receive, send)
         finally:
@@ -1072,30 +1069,30 @@ class DeploymentManager:
     def __init__(self, config_path: str = "deploy-config.yaml"):
         self.config_path = Path(config_path)
         self.config = self._load_config()
-    
+
     def _load_config(self) -> Dict:
         """Load deployment configuration"""
         if not self.config_path.exists():
             raise FileNotFoundError(f"Config file not found: {self.config_path}")
-        
+
         with open(self.config_path) as f:
             return yaml.safe_load(f)
-    
+
     def _run_command(self, cmd: List[str], check: bool = True) -> subprocess.CompletedProcess:
         """Run shell command with error handling"""
         click.echo(f"Running: {' '.join(cmd)}")
         result = subprocess.run(cmd, capture_output=True, text=True)
-        
+
         if check and result.returncode != 0:
             click.echo(f"Error: {result.stderr}", err=True)
             sys.exit(result.returncode)
-        
+
         return result
-    
+
     def build_image(self, tag: str) -> str:
         """Build Docker image"""
         image_name = f"{self.config['registry']}/{self.config['image_name']}:{tag}"
-        
+
         build_cmd = [
             "docker", "build",
             "-f", self.config.get('dockerfile', 'Dockerfile'),
@@ -1103,23 +1100,23 @@ class DeploymentManager:
             "--target", "production",
             "."
         ]
-        
+
         self._run_command(build_cmd)
         return image_name
-    
+
     def push_image(self, image_name: str):
         """Push image to registry"""
         self._run_command(["docker", "push", image_name])
-    
+
     def run_tests(self):
         """Run test suite"""
         test_cmd = self.config.get('test_command', ['pytest', '--cov=src'])
         self._run_command(test_cmd)
-    
+
     def deploy_to_k8s(self, image_name: str, environment: str):
         """Deploy to Kubernetes"""
         namespace = self.config['environments'][environment]['namespace']
-        
+
         # Update deployment with new image
         kubectl_cmd = [
             "kubectl", "set", "image",
@@ -1127,9 +1124,9 @@ class DeploymentManager:
             f"{self.config['app_name']}={image_name}",
             "-n", namespace
         ]
-        
+
         self._run_command(kubectl_cmd)
-        
+
         # Wait for rollout to complete
         rollout_cmd = [
             "kubectl", "rollout", "status",
@@ -1137,13 +1134,13 @@ class DeploymentManager:
             "-n", namespace,
             "--timeout=300s"
         ]
-        
+
         self._run_command(rollout_cmd)
-    
+
     def health_check(self, environment: str) -> bool:
         """Perform health check on deployed application"""
         health_url = self.config['environments'][environment]['health_url']
-        
+
         max_attempts = 10
         for attempt in range(max_attempts):
             try:
@@ -1154,24 +1151,24 @@ class DeploymentManager:
                     return True
             except Exception as e:
                 click.echo(f"Health check attempt {attempt + 1} failed: {e}")
-            
+
             time.sleep(5)
-        
+
         click.echo("❌ Health check failed")
         return False
-    
+
     def rollback(self, environment: str):
         """Rollback to previous deployment"""
         namespace = self.config['environments'][environment]['namespace']
-        
+
         rollback_cmd = [
             "kubectl", "rollout", "undo",
             f"deployment/{self.config['app_name']}",
             "-n", namespace
         ]
-        
+
         self._run_command(rollback_cmd)
-        
+
         # Wait for rollback to complete
         rollout_cmd = [
             "kubectl", "rollout", "status",
@@ -1179,7 +1176,7 @@ class DeploymentManager:
             "-n", namespace,
             "--timeout=300s"
         ]
-        
+
         self._run_command(rollout_cmd)
 
 @click.group()
@@ -1193,42 +1190,42 @@ def cli():
 @click.option('--skip-tests', is_flag=True, help='Skip running tests')
 def deploy(environment: str, tag: Optional[str], skip_tests: bool):
     """Deploy application to specified environment"""
-    
+
     if not tag:
         # Use git commit hash as tag
-        result = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'], 
+        result = subprocess.run(['git', 'rev-parse', '--short', 'HEAD'],
                               capture_output=True, text=True)
         tag = result.stdout.strip()
-    
+
     deployer = DeploymentManager()
-    
+
     try:
         # Run tests
         if not skip_tests:
             click.echo("🧪 Running tests...")
             deployer.run_tests()
-        
+
         # Build image
         click.echo("🔨 Building Docker image...")
         image_name = deployer.build_image(tag)
-        
+
         # Push image
         click.echo("📤 Pushing image to registry...")
         deployer.push_image(image_name)
-        
+
         # Deploy to Kubernetes
         click.echo(f"🚀 Deploying to {environment}...")
         deployer.deploy_to_k8s(image_name, environment)
-        
+
         # Health check
         click.echo("🏥 Performing health check...")
         if not deployer.health_check(environment):
             click.echo("❌ Deployment failed health check, rolling back...")
             deployer.rollback(environment)
             sys.exit(1)
-        
+
         click.echo(f"✅ Successfully deployed {image_name} to {environment}")
-        
+
     except Exception as e:
         click.echo(f"❌ Deployment failed: {e}", err=True)
         sys.exit(1)
@@ -1238,10 +1235,10 @@ def deploy(environment: str, tag: Optional[str], skip_tests: bool):
 def rollback(environment: str):
     """Rollback to previous deployment"""
     deployer = DeploymentManager()
-    
+
     click.echo(f"🔄 Rolling back {environment}...")
     deployer.rollback(environment)
-    
+
     # Health check
     click.echo("🏥 Performing health check...")
     if deployer.health_check(environment):
@@ -1273,7 +1270,7 @@ environments:
     namespace: myapp-staging
     health_url: https://staging-api.myapp.com
     replicas: 2
-  
+
   production:
     namespace: myapp-production
     health_url: https://api.myapp.com

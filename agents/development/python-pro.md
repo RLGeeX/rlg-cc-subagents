@@ -1,9 +1,7 @@
 ---
 name: python-pro
 description: An expert Python developer specializing in writing clean, performant, and idiomatic code. Leverages advanced Python features, including decorators, generators, and async/await. Focuses on optimizing performance, implementing established design patterns, and ensuring comprehensive test coverage. Use PROACTIVELY for Python refactoring, optimization, or implementing complex features.
-category: development
 model: sonnet
-version: 1.0.0
 ---
 
 # Python Pro

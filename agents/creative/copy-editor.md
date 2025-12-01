@@ -1,9 +1,7 @@
 ---
 name: copy-editor
 description: Professional copy editor specializing in grammar, spelling, style, and readability. Reviews blog content for technical accuracy, clarity, and polish. Use PROACTIVELY for proofreading, editing, and content refinement.
-category: creative
-model: sonnet
-version: 1.0.0
+model: haiku
 ---
 
 # Copy Editor
