@@ -1,6 +1,6 @@
 # Agent Catalog
 
-Complete catalog of all 59 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
+Complete catalog of all 62 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
 
 ## Tool Access Pattern
 
@@ -858,6 +858,50 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 
 ---
 
+## Creative Agents (3)
+
+### ghost-writer
+**Description:** Expert blog story writer specializing in technical content. Creates engaging, well-structured articles from Jira requirements with Hugo frontmatter and markdown formatting. Use PROACTIVELY for blog posts, articles, and technical writing tasks.
+
+**Key Capabilities:**
+- Technical blog writing from requirements
+- Hugo frontmatter and markdown formatting
+- SEO-friendly titles and descriptions
+- Engaging narrative structure
+- Feedback integration and revision
+
+**File:** `creative/ghost-writer.md`
+
+---
+
+### copy-editor
+**Description:** Professional copy editor specializing in grammar, spelling, style, and readability. Reviews blog content for technical accuracy, clarity, and polish. Use PROACTIVELY for proofreading, editing, and content refinement.
+
+**Key Capabilities:**
+- Grammar, spelling, and punctuation review
+- Style guide enforcement
+- Readability optimization (grade 10-12)
+- Technical term accuracy
+- Structured feedback with severity levels
+
+**File:** `creative/copy-editor.md`
+
+---
+
+### content-reviewer
+**Description:** Content quality specialist focusing on structure, engagement, SEO, and platform compliance. Reviews articles for clarity, flow, and Hugo format correctness. Use PROACTIVELY for content audits, quality reviews, and publication readiness checks.
+
+**Key Capabilities:**
+- Structure and flow analysis
+- Engagement assessment
+- Hugo frontmatter validation
+- SEO optimization review
+- Publication readiness assessment
+
+**File:** `creative/content-reviewer.md`
+
+---
+
 ## Agent Categories Summary
 
 - **Core Agents (3)**: Always-loaded foundational agents for TDD, documentation, and orchestration
@@ -868,6 +912,7 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 - **Quality Agents (11)**: Testing, security, performance, and code quality experts
 - **AI/ML Agents (2)**: Agent frameworks, vector search, and embeddings specialists
 - **Business Agents (1)**: Financial analysis and market data specialists
+- **Creative Agents (3)**: Blog writing, copy editing, and content quality specialists
 
 ## Usage Guidelines
 
@@ -879,6 +924,6 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 
 ## Version
 
-- **Catalog Version**: 1.1.0
-- **Total Agents**: 59
-- **Last Updated**: 2025-11-17
+- **Catalog Version**: 1.2.0
+- **Total Agents**: 62
+- **Last Updated**: 2025-12-01
