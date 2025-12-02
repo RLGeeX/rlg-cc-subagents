@@ -2,15 +2,15 @@
 
 Standalone specialized agents for [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) Claude Code plugin.
 
-[![Version](https://img.shields.io/badge/version-2.5.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Agents](https://img.shields.io/badge/agents-59-orange.svg)](agents-catalog.md)
+[![Agents](https://img.shields.io/badge/agents-62-orange.svg)](agents-catalog.md)
 
 ---
 
 ## Overview
 
-This repository contains **59 specialized agents** for Claude Code, covering development, infrastructure, quality, and product management. Each agent is an expert in specific technologies, frameworks, or workflows, designed to help you build better software faster.
+This repository contains **62 specialized agents** for Claude Code, covering development, infrastructure, quality, product management, creative, AI/ML, and business domains. Each agent is an expert in specific technologies, frameworks, or workflows, designed to help you build better software faster.
 
 ### What are Standalone Agents?
 
@@ -156,7 +156,7 @@ Foundational agents for code quality and documentation:
 - **doc-assistant** - Maintains documentation quality
 - **orchestrator** - Coordinates complex multi-agent workflows
 
-### Development (13 agents)
+### Development (18 agents)
 
 Software development specialists:
 
@@ -173,8 +173,13 @@ Software development specialists:
 - **dotnet-core-expert** - .NET Core development
 - **csharp-developer** - C# programming
 - **ui-designer** - Visual UI/UX design
+- **nextjs-specialist** - Next.js App Router & server components
+- **material-ui-specialist** - MUI component design & theming
+- **graphql-specialist** - GraphQL schema & resolvers
+- **data-visualization-specialist** - Charts & data visualization
+- **slack-integration-specialist** - Slack Bot API & webhooks
 
-### Infrastructure (8 agents)
+### Infrastructure (13 agents)
 
 DevOps and cloud specialists:
 
@@ -186,6 +191,11 @@ DevOps and cloud specialists:
 - **incident-responder** - Production incident response
 - **database-administrator** - Database management
 - **security-engineer** - Infrastructure security & DevSecOps
+- **aws-lambda-specialist** - AWS Lambda & serverless
+- **aws-amplify-gen2-specialist** - AWS Amplify Gen 2
+- **gcp-serverless-specialist** - GCP Cloud Run & Functions
+- **dynamodb-specialist** - DynamoDB single-table design
+- **enterprise-sso-specialist** - Okta/Auth0/SAML/OIDC
 
 ### Kubernetes (4 agents)
 
@@ -208,7 +218,7 @@ PM, documentation, and team facilitation:
 - **jira-specialist** - JIRA workflows & project management
 - **story-writer** - User stories & requirements
 
-### Quality (10 agents)
+### Quality (11 agents)
 
 Testing, review, and security:
 
@@ -222,8 +232,30 @@ Testing, review, and security:
 - **git-workflow-manager** - Git workflows & branching
 - **dependency-manager** - Dependency management & security
 - **chaos-engineer** - Chaos engineering & resilience
+- **playwright-specialist** - Playwright E2E testing & automation
 
-See [agents/INDEX.md](agents/INDEX.md) for complete catalog with descriptions.
+### Creative (3 agents)
+
+Content creation and editing:
+
+- **ghost-writer** - Technical blog writing from Jira tickets
+- **copy-editor** - Grammar, style & readability review
+- **content-reviewer** - Content quality & SEO review
+
+### AI/ML (2 agents)
+
+AI and machine learning specialists:
+
+- **vector-search-specialist** - RAG systems & embeddings
+- **langgraph-specialist** - LangGraph agent orchestration
+
+### Business (1 agent)
+
+Business and analytics:
+
+- **financial-data-analyst** - Market data & sentiment analysis
+
+See [agents-catalog.md](agents-catalog.md) for complete catalog with descriptions.
 
 ---
 
@@ -367,29 +399,17 @@ Agents power workflow skills (requires cc-unleashed plugin):
 rlg-cc-subagents/
 ├── README.md                      # This file
 ├── LICENSE                        # MIT License
+├── agents-catalog.md              # Complete agent catalog
 ├── agents/
-│   ├── INDEX.md                   # Complete agent catalog
 │   ├── core/                      # Core agents (3)
-│   │   ├── tdd-enforcer.md
-│   │   ├── doc-assistant.md
-│   │   └── orchestrator.md
-│   ├── development/               # Development agents (13)
-│   │   ├── python-pro.md
-│   │   ├── react-specialist.md
-│   │   └── ...
-│   ├── infrastructure/            # Infrastructure agents (8)
-│   │   ├── terraform-specialist.md
-│   │   ├── cloud-architect.md
-│   │   └── ...
+│   ├── development/               # Development agents (18)
+│   ├── infrastructure/            # Infrastructure agents (13)
 │   ├── kubernetes/                # Kubernetes agents (4)
-│   │   ├── k8s-architect.md
-│   │   └── ...
 │   ├── product-management/        # PM agents (7)
-│   │   ├── product-manager.md
-│   │   └── ...
-│   └── quality/                   # Quality agents (10)
-│       ├── code-reviewer.md
-│       └── ...
+│   ├── quality/                   # Quality agents (11)
+│   ├── creative/                  # Creative agents (3)
+│   ├── ai-ml/                     # AI/ML agents (2)
+│   └── business/                  # Business agents (1)
 └── .gitignore
 ```
 
@@ -420,7 +440,7 @@ We welcome contributions! Here's how to add or improve agents:
 1. Fork the repository
 2. Create feature branch (`git checkout -b feature/new-agent`)
 3. Add/modify agent file
-4. Update INDEX.md if adding new agent
+4. Update agents-catalog.md if adding new agent
 5. Test agent functionality
 6. Commit with clear message (`feat: add rust-developer agent`)
 7. Push and create pull request
@@ -435,7 +455,7 @@ We use [Semantic Versioning](https://semver.org/):
 - **MINOR**: New agents added or significant improvements
 - **PATCH**: Bug fixes, description improvements, minor updates
 
-Current version: **2.1.0**
+Current version: **1.0.0**
 
 ---
 
@@ -456,31 +476,29 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/RLGeeX/rlg-cc-subagents/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/RLGeeX/rlg-cc-subagents/discussions)
-- **Documentation**: See [agents/INDEX.md](agents/INDEX.md) for agent catalog
+- **Documentation**: See [agents-catalog.md](agents-catalog.md) for agent catalog
 
 ---
 
 ## Changelog
 
-### [2.1.0] - 2025-11-14
+### [1.0.0] - 2025-12-02
 
 #### Added
-- Initial release of standalone agents repository
-- 45 specialized agents across 6 categories
+- Initial v1.0.0 release of standalone agents repository
+- 62 specialized agents across 9 categories
 - YAML frontmatter format for Claude Code auto-delegation
-- Complete agent catalog with INDEX.md
-- Integration with cc-unleashed plugin v2.1.0
+- Complete agent catalog in agents-catalog.md
+- Integration with cc-unleashed plugin v1.0.0
 - Three installation options: standalone, with plugin, or monorepo
+- New categories: creative (3 agents), ai-ml (2 agents), business (1 agent)
 
 #### Changed
 - Migrated from rlg-cc-unleashed plugin to separate repository
 - Simplified agent names (removed `cc-unleashed:category:` prefixes)
 - Converted all agents to standalone format with YAML frontmatter
 - Agents now installed via symlink to `~/.claude/agents/cc-unleashed/`
-
-#### Fixed
-- Corrected product-manager agent name in documentation
-- Updated installation instructions with symlink activation steps
+- Removed tools field from agent frontmatter (agents inherit from main thread)
 
 ---
 
