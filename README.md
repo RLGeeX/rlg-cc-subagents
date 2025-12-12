@@ -2,7 +2,7 @@
 
 Standalone specialized agents for [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) Claude Code plugin.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/RLGeeX/rlg-cc-subagents/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Agents](https://img.shields.io/badge/agents-62-orange.svg)](agents-catalog.md)
 
@@ -455,7 +455,7 @@ We use [Semantic Versioning](https://semver.org/):
 - **MINOR**: New agents added or significant improvements
 - **PATCH**: Bug fixes, description improvements, minor updates
 
-Current version: **1.0.0**
+Current version: **1.1.0**
 
 ---
 
@@ -481,6 +481,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ## Changelog
+
+### [1.1.0] - 2025-12-12
+
+#### Changed
+- **jira-specialist**: Added explicit MCP tool patterns for creating Epics, Stories, and Sub-tasks
+- Enhanced agent with issue type names table and parent field documentation
+- Added guidance for story points custom field usage
 
 ### [1.0.0] - 2025-12-02
 
