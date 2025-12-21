@@ -1,6 +1,6 @@
 # Agent Catalog
 
-Complete catalog of all 62 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
+Complete catalog of all 61 specialized agents for Claude Code. Each agent is a domain expert with specific tools, knowledge, and capabilities designed to handle particular aspects of software development, infrastructure, and product management.
 
 ## Tool Access Pattern
 
@@ -16,7 +16,7 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 - ✅ Maintainable: No per-agent tool list management
 - ✅ Flexible: Agents use what they need from the inherited set
 
-## Core Agents (3)
+## Core Agents (2)
 
 ### tdd-enforcer
 **Description:** Core agent that ensures test-driven development practices throughout the codebase. Enforces RED-GREEN-REFACTOR cycle and verification before completion. Use PROACTIVELY to maintain testing standards and prevent implementation without tests.
@@ -43,20 +43,6 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 - Ensure inline docs match code
 
 **File:** `core/doc-assistant.md`
-
----
-
-### orchestrator
-**Description:** Core agent that intelligently dispatches requests to specialized agents and workflows. Analyzes intent, manages agent lifecycle, and optimizes context usage. Use PROACTIVELY for complex multi-agent coordination.
-
-**Key Capabilities:**
-- Analyze user requests for intent
-- Smart dispatch to specialized agents
-- Manage agent lifecycle (load, execute, unload)
-- Track context budget and prevent overload
-- Route to appropriate workflows
-
-**File:** `core/orchestrator.md`
 
 ---
 
@@ -918,12 +904,12 @@ This pattern ensures agents automatically get access to new MCP tools as they're
 
 1. **Core Agents**: Always loaded, use proactively for their respective domains
 2. **Specialist Agents**: Load on-demand when specific expertise is needed
-3. **Agent Selection**: Use orchestrator for intelligent agent dispatch based on context
+3. **Agent Selection**: Claude automatically selects appropriate agents based on context
 4. **Context Budget**: Agents are designed to stay within Claude Code's token limits
-5. **Collaboration**: Agents are designed to work together and delegate to each other
+5. **Collaboration**: Main thread can spawn multiple agents in parallel via Task tool
 
 ## Version
 
-- **Catalog Version**: 1.2.0
-- **Total Agents**: 62
+- **Catalog Version**: 1.2.1
+- **Total Agents**: 61
 - **Last Updated**: 2025-12-01

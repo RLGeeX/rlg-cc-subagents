@@ -1,9 +1,9 @@
 # CC-Unleashed Agents
 
-62 specialized agents for Claude Code, designed to work with [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) plugin.
+61 specialized agents for Claude Code, designed to work with [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) plugin.
 
-**Version:** 1.1.0
-**Agents:** 62
+**Version:** 1.1.1
+**Agents:** 61
 **License:** MIT
 
 ## Overview
@@ -56,7 +56,7 @@ Use agents in workflows via the cc-unleashed plugin:
 
 | Category | Count | Examples |
 |----------|-------|----------|
-| Core | 3 | tdd-enforcer, doc-assistant, orchestrator |
+| Core | 2 | tdd-enforcer, doc-assistant |
 | Development | 18 | python-pro, react-specialist, fastapi-pro, backend-architect |
 | Infrastructure | 13 | terraform-specialist, cloud-architect, devops-engineer, sre-engineer |
 | Kubernetes | 4 | k8s-architect, helm-specialist, gitops-engineer, k8s-security |
@@ -95,7 +95,7 @@ rlg-cc-subagents/
 ├── README.md
 ├── agents-catalog.md
 └── agents/
-    ├── core/                 # 3 agents
+    ├── core/                 # 2 agents
     ├── development/          # 18 agents
     ├── infrastructure/       # 13 agents
     ├── kubernetes/           # 4 agents
