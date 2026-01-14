@@ -1,0 +1,36 @@
+{
+  "name": "cc-unleashed-agents-marketplace",
+  "owner": {
+    "name": "RLGeeX",
+    "url": "https://github.com/RLGeeX"
+  },
+  "metadata": {
+    "description": "61 specialized subagents for Claude Code",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "cc-unleashed-agents",
+      "source": "./",
+      "description": "61 specialized subagents for Claude Code - development, infrastructure, quality, kubernetes, creative, and more",
+      "version": "1.0.0",
+      "author": {
+        "name": "RLGeeX",
+        "url": "https://github.com/RLGeeX"
+      },
+      "homepage": "https://github.com/RLGeeX/rlg-cc-subagents",
+      "repository": "https://github.com/RLGeeX/rlg-cc-subagents",
+      "license": "MIT",
+      "keywords": [
+        "agents",
+        "subagents",
+        "development",
+        "infrastructure",
+        "quality",
+        "devops",
+        "kubernetes"
+      ],
+      "category": "agents"
+    }
+  ]
+}
