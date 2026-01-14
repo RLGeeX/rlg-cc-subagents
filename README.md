@@ -1,40 +1,44 @@
 # CC-Unleashed Agents
 
-61 specialized agents for Claude Code, designed to work with [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed) plugin.
+61 specialized subagents for Claude Code, designed as a companion plugin to [cc-unleashed](https://github.com/RLGeeX/rlg-cc-unleashed).
 
-**Version:** 1.1.1
+**Version:** 1.0.0
 **Agents:** 61
 **License:** MIT
 
 ## Overview
 
-Standalone agents are markdown files with YAML frontmatter that Claude Code can automatically discover and use:
+This is a Claude Code **plugin** containing 61 specialized agents organized by category. Agents are auto-discovered and can be invoked:
 
-- **Auto-Delegation**: Claude automatically picks the right expert for your task
-- **Explicit Invocation**: Call specific agents with `@agent-name` syntax
+- **Auto-Delegation**: Claude automatically picks the right expert via the Task tool
+- **Plugin Namespacing**: Agents are namespaced as `cc-unleashed-agents:category:agent-name`
 - **Tool Access**: Each agent inherits all MCP tools from the main thread
 
 ## Installation
 
+### As Plugin (Recommended)
+
 ```bash
-git clone https://github.com/RLGeeX/rlg-cc-subagents ~/.claude/agents/cc-unleashed
+# Clone to your plugins directory
+git clone https://github.com/RLGeeX/rlg-cc-subagents ~/path/to/plugins/cc-unleashed-agents
+
+# Add to Claude Code
+claude /plugin add ~/path/to/plugins/cc-unleashed-agents
 ```
 
-Verify with `@` autocomplete in Claude Code to see available agents.
+Or add directly from GitHub:
+
+```bash
+claude /plugin add https://github.com/RLGeeX/rlg-cc-subagents
+```
+
+Verify with `/plugin list` to see `cc-unleashed-agents`.
 
 ## Usage
 
-### Explicit Invocation
+### Via Task Tool (Primary Method)
 
-```
-@python-pro help me optimize this async code
-@terraform-specialist review my module structure
-@code-reviewer review this implementation
-```
-
-### Auto-Delegation
-
-Just describe your task - Claude selects the right agent:
+Claude uses the Task tool to delegate to agents based on your request:
 
 ```
 Help me write a FastAPI endpoint with proper validation
@@ -42,7 +46,7 @@ Review my Terraform state management strategy
 Check this API for security vulnerabilities
 ```
 
-### With Plugin
+### With CC-Unleashed Plugin
 
 Use agents in workflows via the cc-unleashed plugin:
 
@@ -92,19 +96,30 @@ version: 1.0.0
 
 ```
 rlg-cc-subagents/
+├── .claude-plugin/
+│   └── plugin.json           # Plugin manifest
 ├── README.md
-├── agents-catalog.md
+├── AGENT-TEMPLATE.md         # Template for new agents
+├── agents-catalog.md         # Full catalog with descriptions
 └── agents/
+    ├── ai-ml/                # 2 agents
+    ├── business/             # 1 agent
     ├── core/                 # 2 agents
+    ├── creative/             # 3 agents
     ├── development/          # 18 agents
     ├── infrastructure/       # 13 agents
     ├── kubernetes/           # 4 agents
     ├── product-management/   # 7 agents
-    ├── quality/              # 11 agents
-    ├── creative/             # 3 agents
-    ├── ai-ml/                # 2 agents
-    └── business/             # 1 agent
+    └── quality/              # 11 agents
 ```
+
+## Agent Namespacing
+
+Plugin agents with subdirectories are namespaced as `plugin:category:agent-name`:
+
+- `cc-unleashed-agents:development:python-pro`
+- `cc-unleashed-agents:infrastructure:terraform-specialist`
+- `cc-unleashed-agents:quality:code-reviewer`
 
 ## Related
 

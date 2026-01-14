@@ -1,0 +1,25 @@
+{
+  "name": "cc-unleashed-agents",
+  "version": "1.0.0",
+  "description": "62 specialized subagents for Claude Code - development, infrastructure, quality, creative, and more",
+  "claudeCodeVersion": ">=2.0.31",
+  "author": "RLGeeX",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rlgeex/rlg-cc-subagents"
+  },
+  "metadata": {
+    "tags": ["agents", "subagents", "specialists"],
+    "license": "MIT",
+    "keywords": [
+      "claude-code",
+      "plugin",
+      "agents",
+      "subagents",
+      "development",
+      "infrastructure",
+      "quality",
+      "devops"
+    ]
+  }
+}
