@@ -16,20 +16,10 @@ This is a Claude Code **plugin** containing 61 specialized agents organized by c
 
 ## Installation
 
-### As Plugin (Recommended)
+### From GitHub (Recommended)
 
 ```bash
-# Clone to your plugins directory
-git clone https://github.com/RLGeeX/rlg-cc-subagents ~/path/to/plugins/cc-unleashed-agents
-
-# Add to Claude Code
-claude /plugin add ~/path/to/plugins/cc-unleashed-agents
-```
-
-Or add directly from GitHub:
-
-```bash
-claude /plugin add https://github.com/RLGeeX/rlg-cc-subagents
+claude /plugin add RLGeeX/rlg-cc-subagents
 ```
 
 Verify with `/plugin list` to see `cc-unleashed-agents`.
